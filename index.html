@@ -29,7 +29,9 @@
                 beforeSend: function(xhr){
                     const temp = $.cookie('XSRF-TOKEN');
                     console.log(temp);
-                    xhr.setRequestHeader('X-XSRF-TOKEN', '33bb39d0-6616-4749-8ede-53b38006bed3');},
+                    xhr.setRequestHeader('X-XSRF-TOKEN', '33bb39d0-6616-4749-8ede-53b38006bed3');
+                    xhr.setRequestHeader('Cookie', 'JSESSIONID=2EEA7E5C5E1FC1B2650220F59D8FEA08; XSRF-TOKEN=33bb39d0-6616-4749-8ede-53b38006bed3');
+                },
                 //headers: { 'X-XSRF-TOKEN': xsrf },
                 dataType : 'JSON',
                 scriptCharset: 'utf-8',
