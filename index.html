@@ -22,7 +22,7 @@
 
             $.ajax({
                 type : 'post',
-                url : url
+                url : url,
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/JSON',
                 headers: { 'X-XSRF-TOKEN': xsrf },
