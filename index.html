@@ -19,6 +19,12 @@
             alert(JSON.stringify(JSONdata));
 
             const xsrf = $.cookie('XSRF-TOKEN');
+            
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': xsrf
+            }
+            });
 
             $.ajax({
                 type : 'post',
