@@ -19,12 +19,6 @@
             alert(JSON.stringify(JSONdata));
 
             const xsrf = $.cookie('XSRF-TOKEN');
-            
-            $.ajaxSetup({
-            headers: {
-            'X-CSRF-TOKEN': xsrf
-            }
-            });
 
             $.ajax({
                 type : 'post',
@@ -33,7 +27,7 @@
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/JSON',
                 beforeSend: function(xhr){xhr.setRequestHeader('X-XSRF-TOKEN', xsrf);},
-                headers: { 'X-XSRF-TOKEN': xsrf },
+                //headers: { 'X-XSRF-TOKEN': xsrf },
                 dataType : 'JSON',
                 scriptCharset: 'utf-8',
                 success : function(data) {
