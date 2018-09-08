@@ -22,7 +22,7 @@
 
             $.ajax({
                 type : 'post',
-                url : url,
+                url : 'http://localhost:8080/senryus/likes/',
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/JSON',
                 headers: { 'X-XSRF-TOKEN': xsrf },
