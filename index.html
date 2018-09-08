@@ -29,8 +29,7 @@
                 beforeSend: function(xhr){
                     const temp = $.cookie('XSRF-TOKEN');
                     console.log(temp);
-                    xhr.setRequestHeader('X-XSRF-TOKEN', '33bb39d0-6616-4749-8ede-53b38006bed3');
-                    xhr.setRequestHeader('Cookie', 'JSESSIONID=2EEA7E5C5E1FC1B2650220F59D8FEA08; XSRF-TOKEN=33bb39d0-6616-4749-8ede-53b38006bed3');
+                    xhr.setRequestHeader('X-XSRF-TOKEN', temp);                    
                 },
                 //headers: { 'X-XSRF-TOKEN': xsrf },
                 dataType : 'JSON',
@@ -65,7 +64,7 @@
 </head>
 <body>
 <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
-<p>URL: <input type="text" id="url_post" name="url" size="100" value="http://localhost:8080/senryus/likes"></p>
+<p>URL: <input type="text" id="url_post" name="url" size="100" value="http://local.project-respite.com:8080/senryus/likes"></p>
 <p>value1: <input type="text" id="value1" size="30" value="春過ぎて"></p>
 <p>value2: <input type="text" id="value2" size="30" value="夏来にけらし"></p>
 <p>value3: <input type="text" id="value3" size="30" value="白妙の"></p>
