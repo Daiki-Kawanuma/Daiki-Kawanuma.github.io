@@ -29,6 +29,7 @@
             $.ajax({
                 type : 'post',
                 url : url,
+                crossDomain: true,
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/JSON',
                 headers: { 'X-XSRF-TOKEN': xsrf },
