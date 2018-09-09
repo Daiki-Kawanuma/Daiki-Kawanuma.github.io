@@ -27,7 +27,7 @@
                 data : JSON.stringify(JSONdata),
                 contentType: 'application/JSON',
                 beforeSend: function(xhr){
-                    const temp = $.cookie('XSRF-TOKEN');
+                    const temp = $.cookie('_ctkn');
                     console.log(temp);
                     xhr.setRequestHeader('X-XSRF-TOKEN', temp);                    
                 },
